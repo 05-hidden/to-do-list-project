@@ -1,0 +1,45 @@
+<%- include('partials/header.ejs') %>
+
+<main id="main">
+    <div id="below-sidemenu"></div>
+    <div id="big-block">
+        <div class="for-padding">
+            <div id="list-name">
+                <h1>My Day</h1>
+                <% var date = new Date(); %>
+                <% var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']; %>
+                <% var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']; %>
+                
+                <% var day = days[date.getDay()]; %>
+                <% var month = months[date.getMonth()]; %>
+                <% var dateOfMonth = date.getDate(); %>
+                <p><%= day %>, <%= dateOfMonth %> <%= month %></p>
+                <!-- day + ', ' + dateOfMonth + ' ' + month -->
+            </div>
+            <div id="todo-list">
+                <% var len = MyDay_List.length; %>
+                <% if(len > 0){ %>
+                <ul>
+                    <% for(var i=0; i<len; i++){ %>
+                        <li class="todo-list-items"> <%=MyDay_List[i]%> </li>
+                    <% } %>
+                    
+                </ul>
+                <% }else{ %>
+
+                <% } %>
+            </div>
+            <div id="add-task">
+                <!-- <P style="margin: 0">➕ Add a task</P> -->
+                <button type="button" class="add-task-button" >➕ Add a task</button>
+                <form id="add-task-form">
+                    <input type="text" name="user-task">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<%- include('partials/footer.ejs') %>
+

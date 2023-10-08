@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+}
+
+#main{
+    display: flex;
+    width: 100%;
+    background-color: #202020;
+}
+
+#below-sidemenu{
+    max-width: 315px;
+    min-width: 315px;
+    height: 100vh;
+}
+
+#big-block{
+    flex-grow: 1;
+    /* background-color: #DBE2EF; */
+    /* background-color: rgb(0,0,0,0.5); */
+
+    background-image: url("../images/peakpx.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+
+    height: 100vh;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+
+.for-padding{
+    position: absolute;
+    margin: 30px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#list-name{
+    color: white;
+}
+
+#list-name > h1{
+    margin-bottom: 0;
+}
+#list-name > p{
+    /* margin: 0; */
+    margin-top: 10px;
+}
+
+#todo-list{
+    flex-grow: 1;
+    overflow: auto;
+    color: white;
+    /* background-color: rgb(49, 48, 48, 0.6); */
+    
+    /* background-color: #DBE2EF; */
+    /* list-style-type:circle; */
+}
+
+#todo-list::-webkit-scrollbar {
+    display: none;
+}
+
+.todo-list-items{
+    /* list-style: circle; */
+    background-color: rgb(32, 32, 32, 0.8);
+    padding: 1.2%;
+    margin-bottom: 0.4%;
+    border-radius: 6px;
+}
+
+#add-task{
+    /* height: 20px; */
+    padding: 1.2%;
+    color: white;
+    background-color: rgb(32, 32, 32, 0.8);
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* position: absolute;
+    bottom: 5%;
+    right: 0;
+    left: 0; */
+}
+
+button{
+    background: none;
+    border: none;
+    color: white;
+}
+
+input[type=text] {
+    background: blue;
+    border: none;
+    color: white;
+}
+
+input[type=text]:focus {
+    background: none;
+    border: none;
+    color: white;
+}
+
+#add-task-form{
+    visibility: hidden;
+    height: 0;
+}

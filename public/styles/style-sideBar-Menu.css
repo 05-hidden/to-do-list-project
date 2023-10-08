@@ -1,0 +1,25 @@
+nav{
+  position: absolute;
+  height: 100vh;
+  /* background-color: #112D4E; */
+  background-color: #202020;
+  width: 315px;
+  color: white;
+}
+.side-bar{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.list{
+  list-style: none;
+  padding-bottom: 20px;
+  font-size: 1.5rem;
+}
+ul{
+  padding:0;
+}
+
+h1{
+  font-size: 2.5rem;
+}
